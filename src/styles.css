@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+  
+  }
+  
+  .left-section img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .right-section {
+    width: 50%;
+    padding: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 1rem;
+  }
+  
+  input,
+  select,
+  textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+  }
+  
+  button[type='submit'] {
+    padding: 0.3rem 0.8rem; /* Ajusta el padding según el tamaño deseado */
+    background-color: red; /* Cambia el color a rojo */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega una transición suave */
+  }
+  
+  button[type='submit']:hover {
+    background-color: rgb(59, 51, 51); /* Cambia el color a gris oscuro al pasar el cursor por encima */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button-container button[type='submit'] {
+    padding: 0.3rem 0.8rem; /* Ajusta el padding según el tamaño deseado */
+  }
+  
