@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './styles.css';
+import axios from 'axios';
+import SendModal from './sendModal';
 
 
 function App() {
@@ -11,18 +13,42 @@ function App() {
     comment: ''
   });
 
+  const [showModal, setShowModal] = useState(false);
+
+  async function sendForm() {
+    try {
+      const responde = await axios.post('https://server-expomotor-production.up.railway.app/api/v1/forms', formData);
+      console.log(responde);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // LUIS, ACA DICE QUIEN TE DIJE, QUE TENES QUE AGREGAR PARA EVIAR SOLICITUD HTTP, JAJAJA, TE DICE LO QUE HACER, NOS VAN A DOMINAR!!!!!
-    console.log(formData);
+    // LUIS, ACA DICE QUIEN TE DIJE, QUE TENES QUE AGREGAR PARA ENVIAR SOLICITUD HTTP, JAJAJA,
+    // TE DICE LO QUE HACER, NOS VAN A DOMINAR!!!!!
+    sendForm();
+    setFormData({
+      name: '',
+      phone: '',
+      clientType: '',
+      document: '',
+      comment: ''
+    })
+    setShowModal(true);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 3000);
   };
 
   return (
     <div className="container">
+      {showModal && <SendModal />}
       <div className="left-section">
         <img src="/motorcenterlogo.png" alt="Logo" />
         <p>Bienvenido a ExpoCenter, en el siguiente formulario completa tus datos para
