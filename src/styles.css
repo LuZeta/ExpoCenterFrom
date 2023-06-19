@@ -65,3 +65,26 @@
     padding: 0.3rem 0.8rem; /* Ajusta el padding según el tamaño deseado */
   }
   
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia el flujo de los elementos a columna */
+        height: auto;
+        padding: 30px;
+    }
+  
+    .left-section {
+      order: 1; /* Cambia el orden de aparición en la columna */
+      width: 100%;
+    }
+  
+    .right-section {
+      order: 2; /* Cambia el orden de aparición en la columna */
+      width: 100%;
+    }
+  }
+ 
+  
+  
+  
+  
+  
