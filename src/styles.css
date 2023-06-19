@@ -64,4 +64,29 @@
   .button-container button[type='submit'] {
     padding: 0.3rem 0.8rem; /* Ajusta el padding según el tamaño deseado */
   }
+
   
+  .sendModal {
+    width: 350px;
+    height: 70px;
+    padding: 8px;
+    background-color:#fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sendModal-img {
+    height: 100%;
+}
+
+.sendModal-title {
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+}
