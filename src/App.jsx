@@ -51,8 +51,10 @@ function App() {
       {showModal && <SendModal />}
       <div className="left-section">
         <img src="/motorcenterlogo.png" alt="Logo" />
-        <p>Bienvenido a ExpoCenter, en el siguiente formulario completa tus datos para
-        participar como asistente dela charla de fulanito y menganito bla bla bla... cosas bonitas como yo </p>
+        <p>¡Bienvenido a ExpoCenter! En el siguiente formulario, 
+          completa tus datos para participar de las actividades y sorteos. 
+          Menciona en el cuadro de comentarios la palabra 'Capacitación' 
+          y nos pondremos en contacto contigo para brindarte más información. </p>
       </div>
       <div className="right-section">
         <h2>Ingresa tus datos</h2>
@@ -78,14 +80,6 @@ function App() {
             />
           </label>
           <label>
-            Cliente:
-            <select name="clientType" value={formData.clientType} onChange={handleChange}>
-              <option value="">Seleccione</option>
-              <option value="particular">Particular</option>
-              <option value="taller">Taller</option>
-            </select>
-          </label>
-          <label>
             Documento:
             <input
               type="text"
@@ -96,6 +90,14 @@ function App() {
             />
           </label>
           <label>
+            Cliente:
+            <select name="clientType" value={formData.clientType} onChange={handleChange}>
+              <option value="">Seleccione</option>
+              <option value="particular">Particular</option>
+              <option value="taller">Taller</option>
+            </select>
+          </label>
+          <label className='comentarioCentrado'>
             Comentario:
             <textarea
               name="comment"
@@ -106,6 +108,9 @@ function App() {
           <div className="button-container">
             <button type="submit">Enviar</button>
           </div>
+          <div className='modalDatos'>
+    <span className="fa fa-phone"></span>Por mas información 📞 099 545 546
+  </div>
         </form>
       </div>
     </div>
