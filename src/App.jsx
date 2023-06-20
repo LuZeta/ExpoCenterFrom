@@ -109,7 +109,7 @@ function App() {
             <button type="submit">Enviar</button>
           </div>
           <div className='modalDatos'>
-    <span className="fa fa-phone"></span>Por mas información 📞 099 545 546
+    <span className="fa fa-phone"></span>Por mas información 📞 098 545 546
   </div>
         </form>
       </div>
